@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b3a">
+  <meta name="description" content="Add a vehicle to your Vehicle Manager workspace.">
+  <title>Add Vehicle | Vehicle Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/add-vehicle.js"></script>
+</head>
+<body class="dashboard-page add-vehicle-page">
+  <div class="vehicle-flow-background" aria-hidden="true">
+    <svg class="vehicle-flow-svg" viewBox="0 0 2000 1000" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <path id="vehicle-flow-blue-primary-path" d="M0 300 C125 300 125 220 250 220 C375 220 375 300 500 300 C625 300 625 380 750 380 C875 380 875 300 1000 300"/>
+        <path id="vehicle-flow-blue-secondary-path" d="M0 710 C190 710 160 620 360 620 C560 620 530 790 730 790 C900 790 820 710 1000 710"/>
+        <path id="vehicle-flow-red-primary-path" d="M0 480 C120 480 180 560 340 560 C500 560 500 400 660 400 C820 400 880 480 1000 480"/>
+        <path id="vehicle-flow-red-secondary-path" d="M0 255 C170 255 160 340 340 340 C520 340 480 200 660 200 C840 200 830 255 1000 255"/>
+      </defs>
+      <g class="vehicle-flow-track vehicle-flow-track-blue vehicle-flow-track-blue-primary"><g class="vehicle-flow-drift vehicle-flow-drift-blue-primary"><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-line"/></g></g></g>
+      <g class="vehicle-flow-track vehicle-flow-track-blue vehicle-flow-track-blue-secondary"><g class="vehicle-flow-drift vehicle-flow-drift-blue-secondary"><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-line"/></g></g></g>
+      <g class="vehicle-flow-track vehicle-flow-track-red vehicle-flow-track-red-primary"><g class="vehicle-flow-drift vehicle-flow-drift-red-primary"><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-line"/></g></g></g>
+      <g class="vehicle-flow-track vehicle-flow-track-red vehicle-flow-track-red-secondary"><g class="vehicle-flow-drift vehicle-flow-drift-red-secondary"><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-line"/></g></g></g>
+    </svg>
+  </div>
+  <header class="form-topbar">
+    <a class="form-brand" href="dashboard.html" aria-label="Return to Vehicle Manager dashboard">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" role="presentation"><path d="M9 27.5 12.2 18a4 4 0 0 1 3.8-2.7h16a4 4 0 0 1 3.8 2.7l3.2 9.5v10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-3H15v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-10Zm5.2-2.5h19.6l-2.1-6.2a1 1 0 0 0-.9-.6h-13a1 1 0 0 0-.9.6L14.2 25ZM15 29a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm18 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg></span>
+      <span>Vehicle Manager</span>
+    </a>
+    <span class="form-topbar-caption">Vehicle management</span>
+  </header>
+
+  <main class="add-vehicle-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="dashboard.html">Dashboard</a><span aria-hidden="true">/</span><span aria-current="page">Add Vehicle</span></nav>
+    <div class="add-vehicle-heading">
+      <div><p class="heading-kicker">VEHICLE RECORD</p><h1>Add Vehicle</h1><p class="dashboard-subtitle">Add vehicle and owner details to your garage.</p></div>
+      <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+    </div>
+
+    <form id="vehicle-form" class="vehicle-form" novalidate>
+      <section class="form-section" aria-labelledby="vehicle-info-title">
+        <div class="form-section-heading"><span class="section-number">01</span><div><h2 id="vehicle-info-title">Vehicle Information</h2><p>Basic details to identify this vehicle.</p></div></div>
+        <div class="field-grid">
+          <div class="form-field"><label for="registration-number">Registration Number <span class="required-mark" aria-hidden="true">*</span></label><input id="registration-number" name="registrationNumber" type="text" placeholder="e.g. MH 02 AB 1234" autocomplete="off" required aria-required="true"></div>
+          <div class="form-field"><label for="vehicle-type">Vehicle Type <span class="required-mark" aria-hidden="true">*</span></label><select id="vehicle-type" name="vehicleType" required aria-required="true"><option value="" selected disabled>Select vehicle type</option><option>Car</option><option>Motorcycle</option><option>Scooter</option><option>SUV</option><option>Van</option><option>Truck</option><option>Bus</option><option>Other</option></select></div>
+          <div class="form-field"><label for="manufacturer">Manufacturer</label><input id="manufacturer" name="manufacturer" type="text" placeholder="e.g. Toyota" autocomplete="organization"></div>
+          <div class="form-field"><label for="model">Model</label><input id="model" name="model" type="text" placeholder="e.g. Innova Crysta"></div>
+          <div class="form-field"><label for="variant">Variant</label><input id="variant" name="variant" type="text" placeholder="e.g. 2.4 ZX AT"></div>
+          <div class="form-field"><label for="manufacturing-year">Manufacturing Year</label><input id="manufacturing-year" name="manufacturingYear" type="number" placeholder="e.g. 2022" min="1886" max="2100" inputmode="numeric"></div>
+          <div class="form-field"><label for="color">Color</label><input id="color" name="color" type="text" placeholder="e.g. Pearl white"></div>
+          <div class="form-field"><label for="current-km">Current KM <span class="required-mark" aria-hidden="true">*</span></label><div class="input-suffix-wrap"><input id="current-km" name="currentKm" type="number" placeholder="e.g. 24500" min="0" step="any" inputmode="decimal" required aria-required="true"><span>km</span></div></div>
+          <div class="form-field"><label for="chassis-number">Chassis Number</label><input id="chassis-number" name="chassisNumber" type="text" placeholder="Enter chassis number" autocomplete="off"></div>
+          <div class="form-field"><label for="engine-number">Engine Number</label><input id="engine-number" name="engineNumber" type="text" placeholder="Enter engine number" autocomplete="off"></div>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="owner-info-title">
+        <div class="form-section-heading"><span class="section-number">02</span><div><h2 id="owner-info-title">Owner Information</h2><p>Contact information for the vehicle owner.</p></div></div>
+        <div class="field-grid">
+          <div class="form-field"><label for="owner-name">Owner Name <span class="required-mark" aria-hidden="true">*</span></label><input id="owner-name" name="ownerName" type="text" placeholder="Enter owner name" autocomplete="name" required aria-required="true"></div>
+          <div class="form-field"><label for="owner-phone">Owner Phone</label><input id="owner-phone" name="ownerPhone" type="tel" placeholder="e.g. +91 98765 43210" autocomplete="tel" inputmode="tel" pattern="[+0-9() .-]{7,20}" title="Enter a phone number using digits and common phone symbols."></div>
+          <div class="form-field"><label for="owner-email">Owner Email</label><input id="owner-email" name="ownerEmail" type="email" placeholder="name@example.com" autocomplete="email"></div>
+          <div class="form-field form-field-wide"><label for="owner-address">Owner Address</label><textarea id="owner-address" name="ownerAddress" rows="3" placeholder="Enter owner address" autocomplete="street-address"></textarea></div>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="registration-title">
+        <div class="form-section-heading"><span class="section-number">03</span><div><h2 id="registration-title">Registration</h2><p>Registration dates and validity.</p></div></div>
+        <div class="field-grid">
+          <div class="form-field"><label for="registration-date">Registration Date</label><input id="registration-date" name="registrationDate" type="date"></div>
+          <div class="form-field"><label for="registration-expiry">Registration Expiry</label><input id="registration-expiry" name="registrationExpiry" type="date"></div>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="insurance-title">
+        <div class="form-section-heading"><span class="section-number">04</span><div><h2 id="insurance-title">Insurance</h2><p>Policy provider and coverage dates.</p></div></div>
+        <div class="field-grid">
+          <div class="form-field"><label for="insurance-company">Insurance Company</label><input id="insurance-company" name="insuranceCompany" type="text" placeholder="Enter insurance company"></div>
+          <div class="form-field"><label for="policy-number">Policy Number</label><input id="policy-number" name="policyNumber" type="text" placeholder="Enter policy number"></div>
+          <div class="form-field"><label for="insurance-start-date">Insurance Start Date</label><input id="insurance-start-date" name="insuranceStartDate" type="date"></div>
+          <div class="form-field"><label for="insurance-expiry-date">Insurance Expiry Date</label><input id="insurance-expiry-date" name="insuranceExpiryDate" type="date"></div>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="puc-title">
+        <div class="form-section-heading"><span class="section-number">05</span><div><h2 id="puc-title">Pollution / PUC</h2><p>Pollution certificate information and validity.</p></div></div>
+        <div class="field-grid">
+          <div class="form-field"><label for="puc-certificate-number">PUC Certificate Number</label><input id="puc-certificate-number" name="pucCertificateNumber" type="text" placeholder="Enter certificate number"></div>
+          <div class="form-field"><label for="puc-issue-date">PUC Issue Date</label><input id="puc-issue-date" name="pucIssueDate" type="date"></div>
+          <div class="form-field"><label for="puc-expiry-date">PUC Expiry Date</label><input id="puc-expiry-date" name="pucExpiryDate" type="date"></div>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="other-title">
+        <div class="form-section-heading"><span class="section-number">06</span><div><h2 id="other-title">Other</h2><p>Add any additional notes about this vehicle.</p></div></div>
+        <div class="field-grid"><div class="form-field form-field-wide"><label for="notes">Notes</label><textarea id="notes" name="notes" rows="4" placeholder="Add notes or other relevant information"></textarea></div></div>
+      </section>
+
+      <div class="form-actions">
+        <a class="cancel-action" href="dashboard.html">Cancel</a>
+        <button class="primary-action save-vehicle-button" type="submit">Save Vehicle <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="form-message vehicle-form-message" id="vehicle-form-message" role="status" aria-live="polite" hidden></p>
+    </form>
+    <footer class="dashboard-footer">Vehicle Manager <span aria-hidden="true">·</span> Vehicle Service &amp; Maintenance Management</footer>
+  </main>
+</body>
+</html>

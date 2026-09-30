@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b3a">
+  <meta name="description" content="Sign in to Vehicle Manager, your vehicle service and maintenance workspace.">
+  <title>Sign in | Vehicle Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="vehicle-flow-background" aria-hidden="true">
+    <svg class="vehicle-flow-svg" viewBox="0 0 2000 1000" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <path id="vehicle-flow-blue-primary-path" d="M0 300 C125 300 125 220 250 220 C375 220 375 300 500 300 C625 300 625 380 750 380 C875 380 875 300 1000 300"/>
+        <path id="vehicle-flow-blue-secondary-path" d="M0 710 C190 710 160 620 360 620 C560 620 530 790 730 790 C900 790 820 710 1000 710"/>
+        <path id="vehicle-flow-red-primary-path" d="M0 480 C120 480 180 560 340 560 C500 560 500 400 660 400 C820 400 880 480 1000 480"/>
+        <path id="vehicle-flow-red-secondary-path" d="M0 255 C170 255 160 340 340 340 C520 340 480 200 660 200 C840 200 830 255 1000 255"/>
+      </defs>
+      <g class="vehicle-flow-track vehicle-flow-track-blue vehicle-flow-track-blue-primary"><g class="vehicle-flow-drift vehicle-flow-drift-blue-primary"><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-primary-path" class="vehicle-flow-line"/></g></g></g>
+      <g class="vehicle-flow-track vehicle-flow-track-blue vehicle-flow-track-blue-secondary"><g class="vehicle-flow-drift vehicle-flow-drift-blue-secondary"><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-blue-secondary-path" class="vehicle-flow-line"/></g></g></g>
+      <g class="vehicle-flow-track vehicle-flow-track-red vehicle-flow-track-red-primary"><g class="vehicle-flow-drift vehicle-flow-drift-red-primary"><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-primary-path" class="vehicle-flow-line"/></g></g></g>
+      <g class="vehicle-flow-track vehicle-flow-track-red vehicle-flow-track-red-secondary"><g class="vehicle-flow-drift vehicle-flow-drift-red-secondary"><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-line"/><g transform="translate(1000 0)"><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-glow"/><use href="#vehicle-flow-red-secondary-path" class="vehicle-flow-line"/></g></g></g>
+    </svg>
+  </div>
+  <main class="login-layout">
+    <section class="welcome-panel" aria-labelledby="brand-name">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="presentation">
+            <path d="M9 27.5 12.2 18a4 4 0 0 1 3.8-2.7h16a4 4 0 0 1 3.8 2.7l3.2 9.5v10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-3H15v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-10Zm5.2-2.5h19.6l-2.1-6.2a1 1 0 0 0-.9-.6h-13a1 1 0 0 0-.9.6L14.2 25ZM15 29a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm18 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="brand-kicker">WORKSHOP MANAGEMENT</p>
+          <h1 id="brand-name">Vehicle Manager</h1>
+        </div>
+      </div>
+      <div class="welcome-copy">
+        <p class="welcome-overline">KEEP YOUR GARAGE MOVING</p>
+        <h2>Everything in your workshop, working together.</h2>
+        <p class="subtitle">Vehicle Service &amp; Maintenance Management</p>
+      </div>
+      <div class="panel-footer"><span class="status-dot" aria-hidden="true"></span> A clearer view of every service, every day</div>
+    </section>
+
+    <section class="form-panel" aria-labelledby="login-title">
+      <div class="form-content">
+        <div class="mobile-brand" aria-hidden="true">
+          <div class="brand-mark">
+            <svg viewBox="0 0 48 48" role="presentation"><path d="M9 27.5 12.2 18a4 4 0 0 1 3.8-2.7h16a4 4 0 0 1 3.8 2.7l3.2 9.5v10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-3H15v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-10Zm5.2-2.5h19.6l-2.1-6.2a1 1 0 0 0-.9-.6h-13a1 1 0 0 0-.9.6L14.2 25ZM15 29a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm18 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg>
+          </div>
+          <span>Vehicle Manager</span>
+        </div>
+        <p class="form-eyebrow">WELCOME BACK</p>
+        <h2 id="login-title">Sign in to your account</h2>
+        <p class="form-description">Enter your details to access your garage workspace.</p>
+
+        <form id="login-form">
+          <div class="field-group">
+            <label for="username">Username or Email</label>
+            <div class="input-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+              <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username or email" required>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="input-wrap password-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/></svg>
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+              <button class="password-toggle" id="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <span></span>
+            <a href="#forgot-password" id="forgot-password">Forgot Password?</a>
+          </div>
+          <button class="login-button" type="submit">Login <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite" hidden></p>
+        </form>
+        <p class="secure-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 4 4.5v4.7c0 4 2.5 6.7 6 8.8 3.5-2.1 6-4.8 6-8.8V4.5L10 2Zm-2.5 7.7 1.7 1.7 3.4-3.6"/></svg> Your workspace is ready when you are</p>
+      </div>
+      <footer class="page-footer">&copy; <span id="current-year">2026</span> Vehicle Manager</footer>
+    </section>
+  </main>
+</body>
+</html>
+
+
+
