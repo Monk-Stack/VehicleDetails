@@ -234,8 +234,8 @@ This project is distributed under the MIT License, if the repository includes th
 
 **Your Name**
 
-* GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-* Project: [Vehicle Details Management System](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY)
+* GitHub: [@YOUR_USERNAME](https://github.com/monk-stack)
+* Project: [Vehicle Details Management System](https://github.com/monk-stack/VehicleDetails)
 
 ## ⭐ Support
 
